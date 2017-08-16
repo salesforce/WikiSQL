@@ -218,3 +218,12 @@ If everything works correctly, the output should be:
   "lf_accuracy": 0.2334609075997813
 }
 ```
+
+
+## Annotation
+
+In addition to the raw data dump, we also release an optional annotation script that annotates WikiSQL using [Stanford CoreNLP](https://stanfordnlp.github.io/CoreNLP/).
+The `annotate.py` script will annotate the query, question, and SQL table, as well as a sequence to sequence construction of the input and output for convenience of using Seq2Seq models.
+To use `annotate.py`, you must set up the CoreNLP python client using [Stanford Stanza](https://github.com/stanfordnlp/stanza).
+Note that the sequence output contain symbols to delineate the boundaries of fields.
+In `lib/query.py` you will also find accompanying functions to reconstruct a query given a sequence output in the annotated format.
