@@ -11,7 +11,7 @@ class Query:
 
     agg_ops = ['', 'MAX', 'MIN', 'COUNT', 'SUM', 'AVG']
     cond_ops = ['=', '>', '<', 'OP']
-    syms = ['SELECT', 'WHERE', 'AND', 'COL', 'TABLE', 'CAPTION', 'PAGE', 'SECTION', 'OP', 'COND', 'QUESTION', 'AGG', 'AGGOPS', 'CONDOPS', 'END']
+    syms = ['SELECT', 'WHERE', 'AND', 'COL', 'TABLE', 'CAPTION', 'PAGE', 'SECTION', 'OP', 'COND', 'QUESTION', 'AGG', 'AGGOPS', 'CONDOPS']
 
     def __init__(self, sel_index, agg_index, conditions=tuple()):
         self.sel_index = sel_index
