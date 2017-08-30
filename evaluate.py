@@ -36,6 +36,6 @@ if __name__ == '__main__':
             grades.append(correct)
             exact_match.append(match)
         print(json.dumps({
-            'ex_accuracy': sum(grades) / len(grades),
-            'lf_accuracy': sum(exact_match) / len(exact_match),
+            'ex_accuracy': 1.0 * sum(grades) / len(grades),
+            'lf_accuracy': 1.0 * sum(exact_match) / len(exact_match),
             }, indent=2))
