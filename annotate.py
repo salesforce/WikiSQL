@@ -48,7 +48,7 @@ def annotate_example(example, table):
         q2 = 'SYMWHERE ' + ' SYMAND '.join(q2) + ' SYMEND'
     else:
         q2 = 'SYMEND'
-    inp = 'SYMSYMS {syms} SYMAGGOPS {aggops} SYMCONDOPS {condops} SYMTABLE {table} SYMQUESTION {question}'.format(
+    inp = 'SYMSYMS {syms} SYMAGGOPS {aggops} SYMCONDOPS {condops} SYMTABLE {table} SYMQUESTION {question} SYMEND'.format(
         syms=' '.join(['SYM' + s for s in Query.syms]),
         table=' '.join(['SYMCOL ' + s for s in table['header']]),
         question=example['question'],
