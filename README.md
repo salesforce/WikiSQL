@@ -194,7 +194,7 @@ The `lib` directory contains dependencies of `evaluate.py`.
 
 ## Integration Test
 
-We supply a sample predctions file for the dev set in `test/example.pred.dev.jsonl.bz2`.
+We supply a sample predictions file for the dev set in `test/example.pred.dev.jsonl.bz2`.
 You can unzip this file using `bunzip2 test/example.pred.dev.jsonl.bz2 -k` to look at what a real predictions file should look like.
 We distribute a docker file which installs the necessary dependencies of this library and runs the evaluation script on this file.
 The docker file also serves as an example of how to use the evaluation script.
