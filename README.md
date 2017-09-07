@@ -15,7 +15,6 @@ If you use WikiSQL, please cite the following work:
 ## Installation
 
 Both the evaluation script as well as the dataset are stored within the repo.
-To track the data file, we use [Git LFS](https://git-lfs.github.com/).
 The installation steps are as follows:
 
 ```bash
