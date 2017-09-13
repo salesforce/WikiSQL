@@ -15,6 +15,7 @@ If you use WikiSQL, please cite the following work:
 ## Installation
 
 Both the evaluation script as well as the dataset are stored within the repo.
+**Only Python 3 is supported** at the moment - I would very much welcome a pull request that ports the code to work with Python 2.
 The installation steps are as follows:
 
 ```bash
