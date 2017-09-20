@@ -229,3 +229,14 @@ The `annotate.py` script will annotate the query, question, and SQL table, as we
 To use `annotate.py`, you must set up the CoreNLP python client using [Stanford Stanza](https://github.com/stanfordnlp/stanza).
 Note that the sequence output contain symbols to delineate the boundaries of fields.
 In `lib/query.py` you will also find accompanying functions to reconstruct a query given a sequence output in the annotated format.
+
+
+
+## FAQ
+
+I will update this list with frequently asked questions. 
+
+How do you convert HTML table columns to SQL table columns?
+
+> Web tables are noisy and are not directly transferrable into a database. One problem is that SQL column names need to be symbolic whereas web table columns usually have unicode characters, whitespaces etc. To handle this problem, we convert table columns to symbols (e.g. `Player Name` to `col1`) just before executing the query. For the implementation details, please see `evaluate.py`.
+
