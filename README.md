@@ -10,6 +10,16 @@ If you use WikiSQL, please cite the following work:
 > Victor Zhong, Caiming Xiong, and Richard Socher. 2017. Seq2SQL: Generating Structured Queries from Natural Language using Reinforcement Learning.
 
 
+## Leaderboard
+
+If you submit papers on WikiSQL, please consider sending a pull request to merge your results onto the leaderboard. By submitting, you acknowledge that your results are obtained purely by training on the training split and tuned on the dev split (e.g. you only evaluted on the test set once).
+
+| Model | Dev <br /> logical form <br /> accuracy | Dev <br /> execution <br /> accuracy | Test <br /> logical form <br /> accuracy | Test <br /> execution <br /> accuracy |
+|:---:|:---:|:---:|:---:|:---:|
+|[Baseline<br />(Zhong 2017)](https://arxiv.org/abs/1709.00103) | 23.3 | 37.0 | 23.4 | 35.9 |
+|[Seq2SQL<br />(Zhong 2017)](https://arxiv.org/abs/1709.00103)  | 49.8 | 60.7 | 49.2 | 60.3 |
+
+
 ## Installation
 
 Both the evaluation script as well as the dataset are stored within the repo.
