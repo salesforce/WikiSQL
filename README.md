@@ -16,7 +16,7 @@ If you submit papers on WikiSQL, please consider sending a pull request to merge
 
 | Model | Dev <br /> logical form <br /> accuracy | Dev <br /> execution <br /> accuracy | Test <br /> logical form <br /> accuracy | Test <br /> execution <br /> accuracy |
 |:---:|:---:|:---:|:---:|:---:|
-|[Baseline<br />(Zhong 2017)](https://arxiv.org/abs/1709.00103) | 23.3 | 37.0 | 23.4 | 35.9 |
+|[Baseline<br />(Dong & Lapata 2017)](https://arxiv.org/abs/1601.01280) | 23.3 | 37.0 | 23.4 | 35.9 |
 |[Seq2SQL<br />(Zhong 2017)](https://arxiv.org/abs/1709.00103)  | 49.8 | 60.7 | 49.2 | 60.3 |
 
 
