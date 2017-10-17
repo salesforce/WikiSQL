@@ -14,10 +14,10 @@ If you use WikiSQL, please cite the following work:
 
 If you submit papers on WikiSQL, please consider sending a pull request to merge your results onto the leaderboard. By submitting, you acknowledge that your results are obtained purely by training on the training split and tuned on the dev split (e.g. you only evaluted on the test set once).
 
-| Model | Dev <br /> logical form <br /> accuracy | Dev <br /> execution <br /> accuracy | Test <br /> logical form <br /> accuracy | Test <br /> execution <br /> accuracy |
-|:---:|:---:|:---:|:---:|:---:|
-|[Baseline<br />(Zhong 2017)](https://arxiv.org/abs/1709.00103) | 23.3 | 37.0 | 23.4 | 35.9 |
-|[Seq2SQL<br />(Zhong 2017)](https://arxiv.org/abs/1709.00103)  | 49.8 | 60.7 | 49.2 | 60.3 |
+| Model                                                          | Dev <br /> logical form <br /> accuracy | Dev <br /> execution <br /> accuracy | Test <br /> logical form <br /> accuracy | Test <br /> execution <br /> accuracy |
+| :---:                                                          | :---:                                   | :---:                                | :---:                                    | :---:                                 |
+| [Baseline<br />(Zhong 2017)](https://arxiv.org/abs/1709.00103) | 23.3                                    | 37.0                                 | 23.4                                     | 35.9                                  |
+| [Seq2SQL<br />(Zhong 2017)](https://arxiv.org/abs/1709.00103)  | 49.5                                    | 60.8                                 | 48.3                                     | 59.4                                  |
 
 
 ## Installation
@@ -248,3 +248,8 @@ How do you convert HTML table columns to SQL table columns?
 
 > Web tables are noisy and are not directly transferrable into a database. One problem is that SQL column names need to be symbolic whereas web table columns usually have unicode characters, whitespaces etc. To handle this problem, we convert table columns to symbols (e.g. `Player Name` to `col1`) just before executing the query. For the implementation details, please see `evaluate.py`.
 
+
+
+## Changelog
+
+- 1.1: Removed examples from each split that have gloss mismatch between the logical form conditions and the annotated question utterance.
