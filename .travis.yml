@@ -1,0 +1,10 @@
+language: python
+python:
+  - "3.6"
+install:
+  - pip install -r requirements.txt
+  - tar xvjf data.tar.bz2
+  - bunzip2 test/example.pred.dev.jsonl.bz2
+script:
+  - python test/check.py
+  - python evaluate.py data/dev.jsonl data/dev.db test/example.pred.dev.jsonl
