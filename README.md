@@ -11,6 +11,18 @@ If you use WikiSQL, please cite the following work:
 
 > Victor Zhong, Caiming Xiong, and Richard Socher. 2017. Seq2SQL: Generating Structured Queries from Natural Language using Reinforcement Learning.
 
+```
+@article{zhongSeq2SQL2017,
+  author    = {Victor Zhong and
+               Caiming Xiong and
+               Richard Socher},
+  title     = {Seq2SQL: Generating Structured Queries from Natural Language using
+               Reinforcement Learning},
+  journal   = {CoRR},
+  volume    = {abs/1709.00103},
+  year      = {2017}
+}
+```
 
 ## Leaderboard
 
