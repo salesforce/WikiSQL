@@ -30,9 +30,9 @@ If you submit papers on WikiSQL, please consider sending a pull request to merge
 
 | Model                                                          | Dev <br /> logical form <br /> accuracy | Dev <br /> execution <br /> accuracy | Test <br /> logical form <br /> accuracy | Test <br /> execution <br /> accuracy |
 | :---:                                                          | :---:                                   | :---:                                | :---:                                    | :---:                                 |
-| [Baseline<br />(Zhong 2017)](https://arxiv.org/abs/1709.00103) | 23.3                                    | 37.0                                 | 23.4                                     | 35.9                                  |
+| [SQLNet<br />(Xu 2017)](https://arxiv.org/abs/1711.04436)  | -                                    | 69.8                                 | -                                     | 68.0                                  |
 | [Seq2SQL<br />(Zhong 2017)](https://arxiv.org/abs/1709.00103)  | 49.5                                    | 60.8                                 | 48.3                                     | 59.4                                  |
-
+| [Baseline<br />(Zhong 2017)](https://arxiv.org/abs/1709.00103) | 23.3                                    | 37.0                                 | 23.4                                     | 35.9                                  |
 
 ## Installation
 
