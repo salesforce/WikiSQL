@@ -33,9 +33,11 @@ If you submit papers on WikiSQL, please consider sending a pull request to merge
 | [TypeSQL<br />(Yu 2018)](https://arxiv.org/abs/1804.09769)  | -                                    | 74.5                                | -                                     | 73.5                                  |
 | [PT-MAML<br />(Huang 2018)](https://arxiv.org/abs/1803.02400)  | 63.1                                    | 68.3                                 | 62.8                                     | 68.0                                  |
 | [SQLNet<br />(Xu 2017)](https://arxiv.org/abs/1711.04436)  | -                                    | 69.8                                 | -                                     | 68.0                                  |
-| [Wang 2017](https://www.microsoft.com/en-us/research/publication/pointing-sql-queries-text/)  | 62.0                                    | 67.1                                | 61.5                                     | 66.8                                  |
+| [Wang 2017](https://www.microsoft.com/en-us/research/publication/pointing-sql-queries-text/)^  | 62.0                                    | 67.1                                | 61.5                                     | 66.8                                  |
 | [Seq2SQL<br />(Zhong 2017)](https://arxiv.org/abs/1709.00103)  | 49.5                                    | 60.8                                 | 48.3                                     | 59.4                                  |
 | [Baseline<br />(Zhong 2017)](https://arxiv.org/abs/1709.00103) | 23.3                                    | 37.0                                 | 23.4                                     | 35.9                                  |
+
+`^` indicates that table content is used during training.
 
 ## Installation
 
