@@ -38,8 +38,6 @@ If you submit papers on WikiSQL, please consider sending a pull request to merge
 | [Seq2SQL<br />(Zhong 2017)](https://arxiv.org/abs/1709.00103)  | 49.5                                    | 60.8                                 | 48.3                                     | 59.4                                  |
 | [Baseline<br />(Zhong 2017)](https://arxiv.org/abs/1709.00103) | 23.3                                    | 37.0                                 | 23.4                                     | 35.9                                  |
 
-
-
 `^` indicates that table content is used during training.
 
 ## Installation
