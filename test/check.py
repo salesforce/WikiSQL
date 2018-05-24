@@ -25,6 +25,6 @@ if __name__ == '__main__':
                 if result:
                     for a, b, c in d['sql']['conds']:
                         if str(c).lower() not in d['question'].lower():
-                            raise Exception('Could not find conditon {} in question {} for query {}'.format(c, d['question'], query))
+                            raise Exception('Could not find condition {} in question {} for query {}'.format(c, d['question'], query))
                 else:
                     raise Exception('Query {} did not execute to a valid result'.format(query))
