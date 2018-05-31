@@ -255,6 +255,12 @@ If everything works correctly, the output should be:
 In addition to the raw data dump, we also release an optional annotation script that annotates WikiSQL using [Stanford CoreNLP](https://stanfordnlp.github.io/CoreNLP/).
 The `annotate.py` script will annotate the query, question, and SQL table, as well as a sequence to sequence construction of the input and output for convenience of using Seq2Seq models.
 To use `annotate.py`, you must set up the CoreNLP python client using [Stanford Stanza](https://github.com/stanfordnlp/stanza).
+One docker image of the CoreNLP server that this works with is here:
+
+```
+docker run --name corenlp -d -p 9000:9000 vzhong/corenlp-server
+```
+
 Note that the sequence output contain symbols to delineate the boundaries of fields.
 In `lib/query.py` you will also find accompanying functions to reconstruct a query given a sequence output in the annotated format.
 
