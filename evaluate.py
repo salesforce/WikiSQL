@@ -23,9 +23,9 @@ if __name__ == '__main__':
             ep = json.loads(lp)
             qg = Query.from_dict(eg['sql'])
             gold = engine.execute_query(eg['table_id'], qg, lower=True)
-            pred = ep['error']
+            pred = ep.get('error', None)
             qp = None
-            if not ep['error']:
+            if not ep.get('error', None):
                 try:
                     qp = Query.from_dict(ep['query'])
                     pred = engine.execute_query(eg['table_id'], qp, lower=True)

@@ -244,8 +244,8 @@ If everything works correctly, the output should be:
 
 ```json
 {
-  "ex_accuracy": 0.37036632039365774,
-  "lf_accuracy": 0.2334609075997813
+  "ex_accuracy": 0.5380596128725804,
+  "lf_accuracy": 0.35375846099038116
 }
 ```
 
