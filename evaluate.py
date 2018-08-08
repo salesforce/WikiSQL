@@ -12,6 +12,7 @@ if __name__ == '__main__':
     parser.add_argument('source_file', help='source file for the prediction')
     parser.add_argument('db_file', help='source database for the prediction')
     parser.add_argument('pred_file', help='predictions by the model')
+    parser.add_argument('--ordered', action='store_true', help='whether the exact match should consider the order of conditions')
     args = parser.parse_args()
 
     engine = DBEngine(args.db_file)
@@ -21,13 +22,13 @@ if __name__ == '__main__':
         for ls, lp in tqdm(zip(fs, fp), total=count_lines(args.source_file)):
             eg = json.loads(ls)
             ep = json.loads(lp)
-            qg = Query.from_dict(eg['sql'])
+            qg = Query.from_dict(eg['sql'], ordered=args.ordered)
             gold = engine.execute_query(eg['table_id'], qg, lower=True)
             pred = ep.get('error', None)
             qp = None
             if not ep.get('error', None):
                 try:
-                    qp = Query.from_dict(ep['query'])
+                    qp = Query.from_dict(ep['query'], ordered=args.ordered)
                     pred = engine.execute_query(eg['table_id'], qp, lower=True)
                 except Exception as e:
                     pred = repr(e)
