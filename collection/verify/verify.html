@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<!-- saved from url=(0071)https://paraphrase.herokuapp.com/example/3VHP9MDGRO3FQ3XNG0PGIAFKJDNCFZ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>AnnotateMe</title>
+    <!-- jquery-->
+    <script src="./verify_files/jquery-3.2.1.min.js"></script>
+    <!-- bootstrap-->
+    <link href="./verify_files/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="./verify_files/bootstrap.min(1).css" rel="stylesheet" integrity="sha384-HzUaiJdCTIY/RL2vDPRGdEQHHahjzwoJJzGUkYjHVzTwXFQ2QN/nVgX7tzoMW3Ov" crossorigin="anonymous">
+    <script src="./verify_files/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <!-- tostr-->
+    <link href="./verify_files/toastr.min.css" rel="stylesheet">
+    <script src="./verify_files/toastr.min.js"></script>
+    <!-- style for columns-->
+    <style type="text/css">span.col {
+  background-color: powderblue;
+}
+    </style>
+  <style id="style-1-cropbar-clipper">/* Copyright 2014 Evernote Corporation. All rights reserved. */
+.en-markup-crop-options {
+    top: 18px !important;
+    left: 50% !important;
+    margin-left: -100px !important;
+    width: 200px !important;
+    border: 2px rgba(255,255,255,.38) solid !important;
+    border-radius: 4px !important;
+}
+
+.en-markup-crop-options div div:first-of-type {
+    margin-left: 0px !important;
+}
+</style></head>
+  <body>
+    <div id="container">
+
+<!-- Your instructions here-->
+<h1>Instructions</h1><p>You will be shown 6 generated questions as well as corresponding paraphrases. <span>For each pair of generated question and paraphrase, please select whether the paraphrase and the question have the same meaning. </span><span>The two can be phrased diferently, but were someone to ask you either question, you should arrive at the same answer.</span><span>Your work will be examined by a human, after which you will receive your payment.</span><span>If you have any concerns (e.g. there is a problem with the HIT), please leave them in the feedback.</span>
+</p>
+<p>Below are some examples of good and bad paraphrases.</p>
+
+<!-- Your Examples here-->
+<h3>Examples</h3>
+<p>Question: what are all the player where years in toronto is 2012</p>
+<table class="table">
+  <tbody><tr>
+    <td class="success col-md-1">Good paraphrase</td>
+    <td>Who played in Toronto during 2012?</td>
+  </tr>
+  <tr>
+    <td class="danger error col-md-1">Bad paraphrase</td>
+    <td>What player</td>
+  </tr>
+  <tr>
+    <td class="danger error col-md-1">Why is this bad</td>
+    <td>This is incomplete.</td>
+  </tr>
+</tbody></table>
+
+
+<p>Question: what is the total number of position where school/club team is california and years in toronto is 2003-05</p>
+<table class="table">
+  <tbody><tr>
+    <td class="success col-md-1">Good paraphrase</td>
+    <td>What is the number of the player from California that played between 2003-05 in Toronto?</td>
+  </tr>
+  <tr>
+    <td class="danger error col-md-1">Bad paraphrase</td>
+    <td>Who played between 2003 to 2005 in Toronto who is also from California?</td>
+  </tr>
+  <tr>
+    <td class="danger error col-md-1">Why is this bad</td>
+    <td>The generated question asks for a total number where as this asks for a list of people.</td>
+  </tr>
+</tbody></table>
+
+
+<p>Question: what is the minimum year where bbc two total viewing is 7,530,000</p>
+<table class="table">
+  <tbody><tr>
+    <td class="success col-md-1">Good paraphrase</td>
+    <td>What was the earliest year where the BBC Two had a total viewing of 7,530,000?</td>
+  </tr>
+  <tr>
+    <td class="danger error col-md-1">Bad paraphrase</td>
+    <td>What year was the BBC two total viewing 7,530,000?</td>
+  </tr>
+  <tr>
+    <td class="danger error col-md-1">Why is this bad</td>
+    <td>The generated question asks for the minimum year, whereas this just asks for the year.</td>
+  </tr>
+</tbody></table>
+
+
+</p>
+<h1>Task</h1>
+<form id="queries-form" action="https://workersandbox.mturk.com/mturk/externalSubmit" method="POST">
+  <!-- Your task here-->
+  <h3>Pair 1</h3>
+  <div class="input-group">
+    <p>Question: what are all the obama % where county is burlington</p>
+    <p>Paraphrase: What percentage of people voted for Obama in Burlington?</p>
+    <label class="radio-inline">
+      <input name="agree0" type="radio" value="yes" required="required"><span>Same meaning</span>
+    </label>
+    <label class="radio-inline">
+      <input name="agree0" type="radio" value="no" required="required"><span>Different meaning</span>
+    </label>
+  </div>
+  <h3>Pair 2</h3>
+  <div class="input-group">
+    <p>Question: what are all the mccain % where county is burlington</p>
+    <p>Paraphrase: What percentage of voters choise McCain in Burlington?</p>
+    <label class="radio-inline">
+      <input name="agree1" type="radio" value="yes" required="required"><span>Same meaning</span>
+    </label>
+    <label class="radio-inline">
+      <input name="agree1" type="radio" value="no" required="required"><span>Different meaning</span>
+    </label>
+  </div>
+  <h3>Pair 3</h3>
+  <div class="input-group">
+    <p>Question: what are all the others % where others # is 802</p>
+    <p>Paraphrase: What percentage of voters voted for a third party in the county that had 802 third party voters?</p>
+    <label class="radio-inline">
+      <input name="agree2" type="radio" value="yes" required="required"><span>Same meaning</span>
+    </label>
+    <label class="radio-inline">
+      <input name="agree2" type="radio" value="no" required="required"><span>Different meaning</span>
+    </label>
+  </div>
+  <h3>Pair 4</h3>
+  <div class="input-group">
+    <p>Question: what are all the mccain % where others % is 1.1%</p>
+    <p>Paraphrase: What percentage of voters chose McCain in the county where 1.1% of voters voted third party?</p>
+    <label class="radio-inline">
+      <input name="agree3" type="radio" value="yes" required="required"><span>Same meaning</span>
+    </label>
+    <label class="radio-inline">
+      <input name="agree3" type="radio" value="no" required="required"><span>Different meaning</span>
+    </label>
+  </div>
+  <h3>Pair 5</h3>
+  <div class="input-group">
+    <p>Question: what are all the mccain % where others % is 2.1%</p>
+    <p>Paraphrase: What percentage of voters chose McCain in the county where 2.1% of voters voted third party?</p>
+    <label class="radio-inline">
+      <input name="agree4" type="radio" value="yes" required="required"><span>Same meaning</span>
+    </label>
+    <label class="radio-inline">
+      <input name="agree4" type="radio" value="no" required="required"><span>Different meaning</span>
+    </label>
+  </div>
+  <h3>Pair 6</h3>
+  <div class="input-group">
+    <p>Question: what are all the county where others # is 915</p>
+    <p>Paraphrase: What county had 915 third party voters?</p>
+    <label class="radio-inline">
+      <input name="agree5" type="radio" value="yes" required="required"><span>Same meaning</span>
+    </label>
+    <label class="radio-inline">
+      <input name="agree5" type="radio" value="no" required="required"><span>Different meaning</span>
+    </label>
+  </div>
+  <!-- these things are actually very useful, so don't change them-->
+  <input type="hidden" id="example_id" value="3VHP9MDGRO3FQ3XNG0PGIAFKJDNCFZ" name="example_id">
+  <input type="hidden" id="workerId" value="" name="workerId">
+  <input type="hidden" id="assignmentId" value="" name="assignmentId">
+  <input type="hidden" id="host" value="https://workersandbox.mturk.com/mturk/externalSubmit" name="host">
+  <input type="hidden" id="hitId" value="" name="hitId">
+  <input type="hidden" id="ip" value="10.41.203.70" name="ip">
+  <h3>Optional Feedback</h3><textarea type="text" id="feedback" placeholder="Optional feedback" name="feedback" rows="5" class="form-control"></textarea>
+  <!-- submission button-->
+  <input type="submit" value="Submit" class="btn btn-success">
+</form>
+
+    </div>
+  
+  <footer>
+
+<script>$('#queries-form').submit(function(e) {
+  // we're not going to submit if it is not turk
+  
+    toastr.info('Your work was not submitted to mechanical turk because it is missing the assignment id');
+    e.preventDefault();
+  
+
+  // otherwise the submission to mturk goes through.
+})
+</script>
+
+
+  </footer>
+</body></html>

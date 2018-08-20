@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<!-- saved from url=(0048)https://tableqa.herokuapp.com/example/2562572-25 -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>TableQA</title>
+    <!-- jquery-->
+    <script src="./paraphrase_files/jquery-3.2.1.min.js"></script>
+    <!-- bootstrap-->
+    <link href="./paraphrase_files/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="./paraphrase_files/bootstrap.min(1).css" rel="stylesheet" integrity="sha384-HzUaiJdCTIY/RL2vDPRGdEQHHahjzwoJJzGUkYjHVzTwXFQ2QN/nVgX7tzoMW3Ov" crossorigin="anonymous">
+    <script src="./paraphrase_files/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <!-- tostr-->
+    <link href="./paraphrase_files/toastr.min.css" rel="stylesheet">
+    <script src="./paraphrase_files/toastr.min.js"></script>
+    <!-- style for columns-->
+    <style type="text/css">span.col {
+  background-color: powderblue;
+}
+    </style>
+  <style id="style-1-cropbar-clipper">/* Copyright 2014 Evernote Corporation. All rights reserved. */
+.en-markup-crop-options {
+    top: 18px !important;
+    left: 50% !important;
+    margin-left: -100px !important;
+    width: 200px !important;
+    border: 2px rgba(255,255,255,.38) solid !important;
+    border-radius: 4px !important;
+}
+
+.en-markup-crop-options div div:first-of-type {
+    margin-left: 0px !important;
+}
+</style></head>
+  <body>
+    <div id="container">
+
+<h1>Instructions</h1>
+<p><span>Below are a set of computer generated questions and corresponding answers related to a table on Wikipedia. </span>
+</p>
+<p><span><strong>Please paraphrase, in natural English, the generated question by rewriting it using your own words such that the answer does not change. </strong></span><span>Try to be original so as to not copy the generated paraphrase shown. </span><span>Below, you will find some examples of good paraphrases and bad paraphrases. </span><span>For your convenience, we have highlighted words that correspond to table column names in  </span><span class="col">blue</span><span>. </span><span>These words have a tendency to sound awkward, in which case please try to rephrase them in particular.</span>
+</p>
+<p><span>Once finished, please click the "Submit" button (scroll down) to submit your work. </span><span>Your paraphrase will be examined by a human to make sure that it is original and correct. </span><span>After this, you will receive your payment. </span><span>If the question is very confusing or the table is very difficult to interpret, just try your best and leave a comment in the feedback section.</span>
+</p>
+<p>Your work will greatly contribute to research in automatic information extraction from tables. Thank you for your help!</p>
+<h3>Examples</h3>
+<p>Title: The Dalek Invasion of Earth: Serial details by episode</p>
+<table class="table">
+  <tbody><tr>
+    <td><span class="label label-info disabled">Question to rephrase</span>
+    </td>
+    <td><span>what are all the viewers (in millions) where archive is 16mm t/r and episode is " world's end "</span>
+    </td>
+  </tr>
+  <tr>
+    <td><span class="label label-success diabled">Good</span>
+    </td>
+    <td><span>how many millions of people watched the episodes that were taped on 16mm archive and titled "world's end?</span>
+    </td>
+  </tr>
+  <tr>
+    <td><span class="label label-warning disabled">Bad</span>
+    </td>
+    <td><span>how many viewers (in millions) watched episdoes where archive is 16mm t/r and episode is " world's end "</span>
+    </td>
+  </tr>
+  <tr>
+    <td><span class="label label-warning disabled">Why this is bad</span>
+    </td>
+    <td><span>it is too close to the original</span>
+    </td>
+  </tr>
+</tbody></table>
+<p>Title: The Dalek Invasion of Earth: Serial details by episode</p>
+<table class="table">
+  <tbody><tr>
+    <td><span class="label label-info disabled">Question to rephrase</span>
+    </td>
+    <td><span>what is the total number of season no. where original airdate is 6november2011</span>
+    </td>
+  </tr>
+  <tr>
+    <td><span class="label label-success diabled">Good</span>
+    </td>
+    <td><span>how many seasons were originally aired on november 6th, 2011?</span>
+    </td>
+  </tr>
+  <tr>
+    <td><span class="label label-warning disabled">Bad</span>
+    </td>
+    <td><span>how many seasons were aired in november?</span>
+    </td>
+  </tr>
+  <tr>
+    <td><span class="label label-warning disabled">Why this is bad</span>
+    </td>
+    <td><span>it has a different meaning because november can be in any year and have any date, not just november 6th, 2011</span>
+    </td>
+  </tr>
+</tbody></table>
+<p>Title: Zina Garrison: Doubles: 46 (20–26)</p>
+<table class="table">
+  <tbody><tr>
+    <td><span class="label label-info disabled">Question to rephrase</span>
+    </td>
+    <td><span>what are all the date where surface is carpet (i) and outcome is winner</span>
+    </td>
+  </tr>
+  <tr>
+    <td><span class="label label-success diabled">Good</span>
+    </td>
+    <td><span>list the dates when Zina Garrison played on carpet curface and won.</span>
+    </td>
+  </tr>
+  <tr>
+    <td><span class="label label-warning disabled">Bad</span>
+    </td>
+    <td><span>select dates, surface=carpet &amp; output=winner</span>
+    </td>
+  </tr>
+  <tr>
+    <td><span class="label label-warning disabled">Why this is bad</span>
+    </td>
+    <td><span>it is not a natural sentence</span>
+    </td>
+  </tr>
+</tbody></table>
+<p>Title: 2006 AFL season: Round 7</p>
+<table class="table">
+  <tbody><tr>
+    <td><span class="label label-info disabled">Question to rephrase</span>
+    </td>
+    <td><span>what are all the home team score where date is 14 may and away team is essendon</span>
+    </td>
+  </tr>
+  <tr>
+    <td><span class="label label-success diabled">Good</span>
+    </td>
+    <td><span>how many points did the home team score on may 14 against essendon?</span>
+    </td>
+  </tr>
+  <tr>
+    <td><span class="label label-warning disabled">Bad</span>
+    </td>
+    <td><span>score vs. essendon</span>
+    </td>
+  </tr>
+  <tr>
+    <td><span class="label label-warning disabled">Why this is bad</span>
+    </td>
+    <td><span>this does not have the same meaning in that it does not have a date and it is not clear whose score it is asking for.</span>
+    </td>
+  </tr>
+</tbody></table>
+<p>Title: List of Oregon ballot measures: 1976 General Election</p>
+<table class="table">
+  <tbody><tr>
+    <td><span class="label label-info disabled">Question to rephrase</span>
+    </td>
+    <td><span>what are all the passed where meas. num. is smaller than 3.1827829895505158 and % yes is 29.61%</span>
+    </td>
+  </tr>
+  <tr>
+    <td><span class="label label-success diabled">Good</span>
+    </td>
+    <td><span>did the measure with a number less than 3.18 and 29.61% yes vote pass?</span>
+    </td>
+  </tr>
+  <tr>
+    <td><span class="label label-warning disabled">Bad</span>
+    </td>
+    <td><span>which measure passed with a number less than 3.18 and where 29.61% of the people voted yes?</span>
+    </td>
+  </tr>
+  <tr>
+    <td><span class="label label-warning disabled">Why this is bad</span>
+    </td>
+    <td><span>the original question asks for the pass status of the measure, but the bad example asks for the measures that passed.</span>
+    </td>
+  </tr>
+</tbody></table>
+<h1>Task</h1>
+<h2>Title: List of cities, towns and villages in Vojvodina - </h2>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Settlement</th>
+      <th>Cyrillic Name Other Names</th>
+      <th>Type</th>
+      <th>Population (2011)</th>
+      <th>Largest ethnic group (2002)</th>
+      <th>Dominant religion (2002)</th>
+    </tr>
+  </thead>
+  <tfoot>
+    <tr>
+      <th>Settlement</th>
+      <th>Cyrillic Name Other Names</th>
+      <th>Type</th>
+      <th>Population (2011)</th>
+      <th>Largest ethnic group (2002)</th>
+      <th>Dominant religion (2002)</th>
+    </tr>
+  </tfoot>
+  <tbody>
+    <tr>
+      <td>Odžaci</td>
+      <td>Оџаци</td>
+      <td>town</td>
+      <td>8810</td>
+      <td>Serbs</td>
+      <td>Orthodox Christianity</td>
+    </tr>
+    <tr>
+      <td>Bački Brestovac</td>
+      <td>Бачки Брестовац</td>
+      <td>village</td>
+      <td>2819</td>
+      <td>Serbs</td>
+      <td>Orthodox Christianity</td>
+    </tr>
+    <tr>
+      <td>Bački Gračac</td>
+      <td>Бачки Грачац</td>
+      <td>village</td>
+      <td>2286</td>
+      <td>Serbs</td>
+      <td>Orthodox Christianity</td>
+    </tr>
+    <tr>
+      <td>Bogojevo</td>
+      <td>Богојево (Hungarian: Gombos)</td>
+      <td>village</td>
+      <td>1744</td>
+      <td>Hungarians</td>
+      <td>Catholic Christianity</td>
+    </tr>
+    <tr>
+      <td>Deronje</td>
+      <td>Дероње</td>
+      <td>village</td>
+      <td>2487</td>
+      <td>Serbs</td>
+      <td>Orthodox Christianity</td>
+    </tr>
+    <tr>
+      <td>Karavukovo</td>
+      <td>Каравуково</td>
+      <td>village</td>
+      <td>4215</td>
+      <td>Serbs</td>
+      <td>Orthodox Christianity</td>
+    </tr>
+    <tr>
+      <td>Lalić</td>
+      <td>Лалић (Slovak: Laliť)</td>
+      <td>village</td>
+      <td>1343</td>
+      <td>Slovaks</td>
+      <td>Protestantism</td>
+    </tr>
+    <tr>
+      <td>Ratkovo</td>
+      <td>Ратково</td>
+      <td>village</td>
+      <td>3411</td>
+      <td>Serbs</td>
+      <td>Orthodox Christianity</td>
+    </tr>
+  </tbody>
+</table>
+<form id="queries-form" action="https://workersandbox.mturk.com/mturk/externalSubmit" method="POST">
+
+  <h3>Question 1</h3>
+  <!-- p SQL: select Settlement as result from mytable where Largest ethnic group (2002) = Slovaks-->
+  <p>Question to rephrase:
+    </p><ul>
+      <li>what are all the <span class="col">settlement</span> where <span class="col">largest ethnic group (2002)</span> is slovaks</li>
+    </ul>
+  <p></p>
+  <p>Answers:</p>
+  <ul>
+    <li>Lalić</li>
+  </ul>
+  <div class="input-group"><span class="input-group-addon">Rewrite</span>
+    <input type="text" placeholder="Your paraphrase" name="rewrite0" required="required" class="form-control" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABHklEQVQ4EaVTO26DQBD1ohQWaS2lg9JybZ+AK7hNwx2oIoVf4UPQ0Lj1FdKktevIpel8AKNUkDcWMxpgSaIEaTVv3sx7uztiTdu2s/98DywOw3Dued4Who/M2aIx5lZV1aEsy0+qiwHELyi+Ytl0PQ69SxAxkWIA4RMRTdNsKE59juMcuZd6xIAFeZ6fGCdJ8kY4y7KAuTRNGd7jyEBXsdOPE3a0QGPsniOnnYMO67LgSQN9T41F2QGrQRRFCwyzoIF2qyBuKKbcOgPXdVeY9rMWgNsjf9ccYesJhk3f5dYT1HX9gR0LLQR30TnjkUEcx2uIuS4RnI+aj6sJR0AM8AaumPaM/rRehyWhXqbFAA9kh3/8/NvHxAYGAsZ/il8IalkCLBfNVAAAAABJRU5ErkJggg==&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%;">
+  </div>
+  <input type="hidden" name="generated0" value="what are all the settlement where largest ethnic group (2002) is slovaks" required="required">
+  <input type="hidden" name="sql0" value="select Settlement as result from mytable where Largest ethnic group (2002) = Slovaks" required="required">
+
+  <h3>Question 2</h3>
+  <!-- p SQL: select Settlement as result from mytable where Type = town-->
+  <p>Question to rephrase:
+    </p><ul>
+      <li>what are all the <span class="col">settlement</span> where <span class="col">type</span> is town</li>
+    </ul>
+  <p></p>
+  <p>Answers:</p>
+  <ul>
+    <li>Odžaci</li>
+  </ul>
+  <div class="input-group"><span class="input-group-addon">Rewrite</span>
+    <input type="text" placeholder="Your paraphrase" name="rewrite1" required="required" class="form-control">
+  </div>
+  <input type="hidden" name="generated1" value="what are all the settlement where type is town" required="required">
+  <input type="hidden" name="sql1" value="select Settlement as result from mytable where Type = town" required="required">
+
+  <h3>Question 3</h3>
+  <!-- p SQL: select Type as result from mytable where Cyrillic Name Other Names = Оџаци-->
+  <p>Question to rephrase:
+    </p><ul>
+      <li>what are all the <span class="col">type</span> where <span class="col">cyrillic name other names</span> is оџаци</li>
+    </ul>
+  <p></p>
+  <p>Answers:</p>
+  <ul>
+    <li>town</li>
+  </ul>
+  <div class="input-group"><span class="input-group-addon">Rewrite</span>
+    <input type="text" placeholder="Your paraphrase" name="rewrite2" required="required" class="form-control">
+  </div>
+  <input type="hidden" name="generated2" value="what are all the type where cyrillic name other names is оџаци" required="required">
+  <input type="hidden" name="sql2" value="select Type as result from mytable where Cyrillic Name Other Names = Оџаци" required="required">
+
+  <h3>Question 4</h3>
+  <!-- p SQL: select Cyrillic Name Other Names as result from mytable where Settlement = Ratkovo-->
+  <p>Question to rephrase:
+    </p><ul>
+      <li>what are all the <span class="col">cyrillic name other names</span> where <span class="col">settlement</span> is ratkovo</li>
+    </ul>
+  <p></p>
+  <p>Answers:</p>
+  <ul>
+    <li>Ратково</li>
+  </ul>
+  <div class="input-group"><span class="input-group-addon">Rewrite</span>
+    <input type="text" placeholder="Your paraphrase" name="rewrite3" required="required" class="form-control">
+  </div>
+  <input type="hidden" name="generated3" value="what are all the cyrillic name other names where settlement is ratkovo" required="required">
+  <input type="hidden" name="sql3" value="select Cyrillic Name Other Names as result from mytable where Settlement = Ratkovo" required="required">
+
+  <h3>Question 5</h3>
+  <!-- p SQL: select Settlement as result from mytable where Dominant religion (2002) = Orthodox Christianity and Type = village and Cyrillic Name Other Names = Ратково-->
+  <p>Question to rephrase:
+    </p><ul>
+      <li>what are all the <span class="col">settlement</span> where <span class="col">dominant religion (2002)</span> is orthodox christianity and <span class="col">type</span> is village and <span class="col">cyrillic name other names</span> is ратково</li>
+    </ul>
+  <p></p>
+  <p>Answers:</p>
+  <ul>
+    <li>Ratkovo</li>
+  </ul>
+  <div class="input-group"><span class="input-group-addon">Rewrite</span>
+    <input type="text" placeholder="Your paraphrase" name="rewrite4" required="required" class="form-control">
+  </div>
+  <input type="hidden" name="generated4" value="what are all the settlement where dominant religion (2002) is orthodox christianity and type is village and cyrillic name other names is ратково" required="required">
+  <input type="hidden" name="sql4" value="select Settlement as result from mytable where Dominant religion (2002) = Orthodox Christianity and Type = village and Cyrillic Name Other Names = Ратково" required="required">
+
+  <h3>Question 6</h3>
+  <!-- p SQL: select Largest ethnic group (2002) as result from mytable where Cyrillic Name Other Names = Дероње-->
+  <p>Question to rephrase:
+    </p><ul>
+      <li>what are all the <span class="col">largest ethnic group (2002)</span> where <span class="col">cyrillic name other names</span> is дероње</li>
+    </ul>
+  <p></p>
+  <p>Answers:</p>
+  <ul>
+    <li>Serbs</li>
+  </ul>
+  <div class="input-group"><span class="input-group-addon">Rewrite</span>
+    <input type="text" placeholder="Your paraphrase" name="rewrite5" required="required" class="form-control">
+  </div>
+  <input type="hidden" name="generated5" value="what are all the largest ethnic group (2002) where cyrillic name other names is дероње" required="required">
+  <input type="hidden" name="sql5" value="select Largest ethnic group (2002) as result from mytable where Cyrillic Name Other Names = Дероње" required="required">
+  <h3>Optional Feedback</h3><textarea placeholder="Use this area to describe how you feel about the task and how we can improve. This is not used for evaluation." name="feedback" rows="5" class="input form-control"></textarea>
+  <input type="hidden" id="assignmentId" value="" name="assignmentId">
+  <input type="hidden" id="workerId" value="" name="workerId">
+  <input type="hidden" id="hitId" value="" name="hitId">
+  <input type="hidden" id="tableId" value="2562572-25" name="tableId">
+  <input type="hidden" id="hide_table" value="None" name="hide_table">
+  <input type="submit" value="Submit" class="btn btn-success">
+</form>
+
+    </div>
+  
+  <footer>
+
+<script>function approve_assignment(example_id, assignment_id, approved) {
+  var data = {'ex_id': example_id, 'assignment_id': assignment_id, 'status': approved? 'success' : 'danger'};
+  var db_url = "/review";
+  $.post(db_url, data)
+  .done(function() {
+    toastr.success((approved? 'Approved' : 'Rejected') + ' assignment ' + assignment_id);
+  })
+  .fail(function() {
+    toastr.error('Approval failed!');
+    console.log(data);
+  });
+}
+
+$(document).ready(function() {
+  $("td.location").each(function(index) {
+    var cell = $(this);
+    var ip = cell.text(); 
+    $.getJSON('http://freegeoip.net/json/' + ip, function(data) {
+      if (data.country_name) {
+        cell.text(data.region_name + ', ' + data.country_name);
+      }
+    });
+  });
+});
+
+$('#queries-form').submit(function(e) {
+  // we're not going to submit if it is not turk
+  
+    toastr.info('Your work was not submitted to mechanical turk because it is missing the assignment id');
+    e.preventDefault();
+  
+
+  var db_url = "/example/2562572-25";
+  var form = $('#queries-form');
+  var arr = form.serializeArray();
+  var data = {};
+  for (var i=0; i<arr.length; i++) {
+    data[arr[i].name] = arr[i].value;
+  }
+  $.post(db_url, data)
+  .done(function() {
+    toastr.success('Thanks!');
+  })
+  .fail(function() {
+    toastr.error('Failed to submit results! Please contact the requester and include the url ' + db_url + '. We appologize for the error!');
+    e.preventDefault();
+  })
+})
+</script>
+
+
+  </footer>
+</body></html>
