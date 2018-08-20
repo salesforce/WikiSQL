@@ -13,15 +13,20 @@ class Query:
     cond_ops = ['=', '>', '<', 'OP']
     syms = ['SELECT', 'WHERE', 'AND', 'COL', 'TABLE', 'CAPTION', 'PAGE', 'SECTION', 'OP', 'COND', 'QUESTION', 'AGG', 'AGGOPS', 'CONDOPS']
 
-    def __init__(self, sel_index, agg_index, conditions=tuple()):
+    def __init__(self, sel_index, agg_index, conditions=tuple(), ordered=False):
         self.sel_index = sel_index
         self.agg_index = agg_index
         self.conditions = list(conditions)
+        self.ordered = ordered
 
     def __eq__(self, other):
         if isinstance(other, self.__class__):
             indices = self.sel_index == other.sel_index and self.agg_index == other.agg_index
-            conds = [(col, op, cond.lower() if isinstance(cond, str) else cond) for col, op, cond in self.conditions] == [(col, op, cond.lower() if isinstance(cond, str) else cond) for col, op, cond in other.conditions]
+            if other.ordered:
+                conds = [(col, op, str(cond).lower()) for col, op, cond in self.conditions] == [(col, op, str(cond).lower()) for col, op, cond in other.conditions]
+            else:
+                conds = set([(col, op, str(cond).lower()) for col, op, cond in self.conditions]) == set([(col, op, str(cond).lower()) for col, op, cond in other.conditions])
+
             return indices and conds
         return NotImplemented
 
@@ -52,8 +57,8 @@ class Query:
         return self.__class__(self.sel_index, self.agg_index, conds)
 
     @classmethod
-    def from_dict(cls, d):
-        return cls(sel_index=d['sel'], agg_index=d['agg'], conditions=d['conds'])
+    def from_dict(cls, d, ordered=False):
+        return cls(sel_index=d['sel'], agg_index=d['agg'], conditions=d['conds'], ordered=ordered)
 
     @classmethod
     def from_tokenized_dict(cls, d):
