@@ -30,7 +30,7 @@ If you submit papers on WikiSQL, please consider sending a pull request to merge
 
 | Model                                                          | Dev <br /> logical form <br /> accuracy | Dev <br /> execution <br /> accuracy | Test <br /> logical form <br /> accuracy | Test <br /> execution <br /> accuracy |
 | :---:                                                          | :---:                                   | :---:                                | :---:                                    | :---:                                 |
-| [Execution-Guided Decoding<br />(Wang 2018)](https://arxiv.org/abs/1807.03100v2) | 76.0                                    | 84.0                                 | 75.4                                     | 83.8                                  |
+| [Execution-Guided Decoding<br />(Wang 2018)](https://arxiv.org/abs/1807.03100) | 76.0                                    | 84.0                                 | 75.4                                     | 83.8                                  |
 | [MQAN (unordered)<br />(McCann 2018)](https://arxiv.org/abs/1806.08730) | 76.1                                    | 82.0                                 | 75.4                                     | 81.4                                  |
 | [MQAN (ordered)<br />(McCann 2018)](https://arxiv.org/abs/1806.08730) | 73.5                                    | 82.0                                 | 73.2                                     | 81.4                                  |
 | [Coarse2Fine<br />(Dong 2018)](https://arxiv.org/abs/1805.04793) | 72.5                                    | 79.0                                 | 71.7                                     | 78.5                                  |
