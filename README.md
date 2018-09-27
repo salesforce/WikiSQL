@@ -28,21 +28,21 @@ If you use WikiSQL, please cite the following work:
 
 If you submit papers on WikiSQL, please consider sending a pull request to merge your results onto the leaderboard. By submitting, you acknowledge that your results are obtained purely by training on the training split and tuned on the dev split (e.g. you only evaluted on the test set once). Moreover, you acknowledge that your models only use the table schema and question during inference. That is they do *not* use the table content.
 
-| Model                                                          | Dev <br /> logical form <br /> accuracy | Dev <br /> execution <br /> accuracy | Test <br /> logical form <br /> accuracy | Test <br /> execution <br /> accuracy |
-| :---:                                                          | :---:                                   | :---:                                | :---:                                    | :---:                                 |
-| [IncSQL<br />(Shi 2018)](https://arxiv.org/pdf/1809.05054.pdf) | 51.3                                    | 87.2                                | 51.1                                     | 87.1                                  |
-| [Execution-Guided Decoding<br />(Wang 2018)](https://arxiv.org/abs/1807.03100) | 76.0                                    | 84.0                                 | 75.4                                     | 83.8                                  |
-| [MQAN (unordered)<br />(McCann 2018)](https://arxiv.org/abs/1806.08730) | 76.1                                    | 82.0                                 | 75.4                                     | 81.4                                  |
-| [MQAN (ordered)<br />(McCann 2018)](https://arxiv.org/abs/1806.08730) | 73.5                                    | 82.0                                 | 73.2                                     | 81.4                                  |
-| [Coarse2Fine<br />(Dong 2018)](https://arxiv.org/abs/1805.04793) | 72.5                                    | 79.0                                 | 71.7                                     | 78.5                                  |
-| [TypeSQL<br />(Yu 2018)](https://arxiv.org/abs/1804.09769)  | -                                    | 74.5                                | -                                     | 73.5                                  |
-| [PT-MAML<br />(Huang 2018)](https://arxiv.org/abs/1803.02400)  | 63.1                                    | 68.3                                 | 62.8                                     | 68.0                                  |
-| [SQLNet<br />(Xu 2017)](https://arxiv.org/abs/1711.04436)  | -                                    | 69.8                                 | -                                     | 68.0                                  |
-| [Wang 2017](https://www.microsoft.com/en-us/research/publication/pointing-sql-queries-text/)^  | 62.0                                    | 67.1                                | 61.5                                     | 66.8                                  |
-| [Seq2SQL<br />(Zhong 2017)](https://arxiv.org/abs/1709.00103)  | 49.5                                    | 60.8                                 | 48.3                                     | 59.4                                  |
-| [Baseline<br />(Zhong 2017)](https://arxiv.org/abs/1709.00103) | 23.3                                    | 37.0                                 | 23.4                                     | 35.9                                  |
+| Model                                                          | Dev <br /> logical form <br /> accuracy | Dev <br /> execution <br /> accuracy | Test <br /> logical form <br /> accuracy | Test <br /> execution <br /> accuracy | Uses execution |
+| :---:                                                          | :---:                                   | :---:                                | :---:                                    | :---:                                 | :---:          |
+| [IncSQL<br />(Shi 2018)](https://arxiv.org/pdf/1809.05054.pdf) | 51.3                                    | 87.2                                 | 51.1                                     | 87.1                                  | Inference      |
+| [Execution-Guided Decoding<br />(Wang 2018)](https://arxiv.org/abs/1807.03100) | 76.0                    | 84.0                                 | 75.4                                     | 83.8                                  | Inference      |
+| [MQAN (unordered)<br />(McCann 2018)](https://arxiv.org/abs/1806.08730) | 76.1                           | 82.0                                 | 75.4                                     | 81.4                                  |                |
+| [MQAN (ordered)<br />(McCann 2018)](https://arxiv.org/abs/1806.08730) | 73.5                             | 82.0                                 | 73.2                                     | 81.4                                  |                |
+| [Coarse2Fine<br />(Dong 2018)](https://arxiv.org/abs/1805.04793) | 72.5                                  | 79.0                                 | 71.7                                     | 78.5                                  |                |
+| [TypeSQL<br />(Yu 2018)](https://arxiv.org/abs/1804.09769)  | -                                          | 74.5                                 | -                                        | 73.5                                  |                |
+| [PT-MAML<br />(Huang 2018)](https://arxiv.org/abs/1803.02400)  | 63.1                                    | 68.3                                 | 62.8                                     | 68.0                                  |                |
+| [SQLNet<br />(Xu 2017)](https://arxiv.org/abs/1711.04436)  | -                                           | 69.8                                 | -                                        | 68.0                                  |                |
+| [Wang 2017](https://www.microsoft.com/en-us/research/publication/pointing-sql-queries-text/)^   | 62.0   | 67.1                                 | 61.5                                     | 66.8                                  |                |
+| [Seq2SQL<br />(Zhong 2017)](https://arxiv.org/abs/1709.00103)  | 49.5                                    | 60.8                                 | 48.3                                     | 59.4                                  | Training       |
+| [Baseline<br />(Zhong 2017)](https://arxiv.org/abs/1709.00103) | 23.3                                    | 37.0                                 | 23.4                                     | 35.9                                  |                |
 
-`^` indicates that table content is used during training.
+`^` indicates that table content is used directly by the model during training.
 
 ## Installation
 
