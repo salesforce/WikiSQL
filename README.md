@@ -30,8 +30,10 @@ If you submit papers on WikiSQL, please consider sending a pull request to merge
 
 | Model                                                          | Dev <br /> logical form <br /> accuracy | Dev <br /> execution <br /> accuracy | Test <br /> logical form <br /> accuracy | Test <br /> execution <br /> accuracy | Uses execution |
 | :---:                                                          | :---:                                   | :---:                                | :---:                                    | :---:                                 | :---:          |
+| [SQLova<br />+Execution-Guided Decoding<br />(Hwang 2019)](https://ssl.pstatic.net/static/clova/service/clova_ai/research/publications/SQLova.pdf) | 84.2* | 90.2               | 83.6*                                    | 89.6                                  |                |
 | [IncSQL<br />+Execution-Guided Decoding<br />(Shi 2018)](https://arxiv.org/pdf/1809.05054.pdf) | 51.3                                    | 87.2                                 | 51.1                                     | 87.1                                  | Inference      |
 | [Execution-Guided Decoding<br />(Wang 2018)](https://arxiv.org/abs/1807.03100) | 76.0                    | 84.0                                 | 75.4                                     | 83.8                                  | Inference      |
+| [SQLova <br />(Hwang 2019)](https://ssl.pstatic.net/static/clova/service/clova_ai/research/publications/SQLova.pdf) | 81.6* | 87.2              | 80.7*                                    | 86.2                                  |                |
 | [IncSQL<br />(Shi 2018)](https://arxiv.org/pdf/1809.05054.pdf) | 49.9                                    | 84.0                                 | 49.9                                     | 83.7                                  |                |
 | [MQAN (unordered)<br />(McCann 2018)](https://arxiv.org/abs/1806.08730) | 76.1                           | 82.0                                 | 75.4                                     | 81.4                                  |                |
 | [MQAN (ordered)<br />(McCann 2018)](https://arxiv.org/abs/1806.08730) | 73.5                             | 82.0                                 | 73.2                                     | 81.4                                  |                |
@@ -44,7 +46,8 @@ If you submit papers on WikiSQL, please consider sending a pull request to merge
 | [Baseline<br />(Zhong 2017)](https://arxiv.org/abs/1709.00103) | 23.3                                    | 37.0                                 | 23.4                                     | 35.9                                  |                |
 
 `^` indicates that table content is used directly by the model during training.
-
+<br />
+`*` indicates that the order in where conditions is ignored.
 ## Installation
 
 Both the evaluation script as well as the dataset are stored within the repo.
