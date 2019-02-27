@@ -1,4 +1,4 @@
 tqdm
-records
+records==0.5.2
 babel
 tabulate
