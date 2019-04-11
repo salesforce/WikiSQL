@@ -57,7 +57,7 @@ Both the evaluation script as well as the dataset are stored within the repo.
 The installation steps are as follows:
 
 ```bash
-git clone https://github.com/MetaMind/WikiSQL
+git clone https://github.com/salesforce/WikiSQL
 cd WikiSQL
 pip install -r requirements.txt
 tar xvjf data.tar.bz2
