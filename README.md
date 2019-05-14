@@ -26,9 +26,19 @@ If you use WikiSQL, please cite the following work:
 
 ## Leaderboard
 
-If you submit papers on WikiSQL, please consider sending a pull request to merge your results onto the leaderboard. By submitting, you acknowledge that your results are obtained purely by training on the training split and tuned on the dev split (e.g. you only evaluted on the test set once). Moreover, you acknowledge that your models only use the table schema and question during inference. That is they do *not* use the table content.
+If you submit papers on WikiSQL, please consider sending a pull request to merge your results onto the leaderboard. By submitting, you acknowledge that your results are obtained purely by training on the training split and tuned on the dev split (e.g. you only evaluted on the test set once). Moreover, you acknowledge that your models only use the table schema and question during inference. That is they do *not* use the table content. **Update (May 12, 2019)**: We now have a separate leaderboard for distantly supervised models that do not use logical forms during training.
 
-| Model                                                          | Dev <br /> logical form <br /> accuracy | Dev <br /> execution <br /> accuracy | Test <br /> logical form <br /> accuracy | Test <br /> execution <br /> accuracy | Uses execution |
+
+### Distantly supervised without logical form
+
+| Model | Dev execution accuracy | Test execution accuracy |
+| :---: | :---:        | :---:         |
+| [MAPO (Liang 2018)](https://arxiv.org/abs/1807.02322)  | 72.2 +/- 0.2 | 72.1 +/- 0.3  |
+
+
+### Supervised via logical form
+
+| Model                                                          | Dev logical form <br /> accuracy | Dev <br /> execution <br /> accuracy | Test <br /> logical form <br /> accuracy | Test <br /> execution <br /> accuracy | Uses execution |
 | :---:                                                          | :---:                                   | :---:                                | :---:                                    | :---:                                 | :---:          |
 | [X-SQL<br />+Execution-Guided Decoding<br />(He 2019)](https://www.microsoft.com/en-us/research/publication/x-sql-reinforce-context-into-schema-representation/) | 86.2 | 92.3               | 86.0                                    | 91.8                                  |  Inference          |
 | [SQLova<br />+Execution-Guided Decoding<br />(Hwang 2019)](https://ssl.pstatic.net/static/clova/service/clova_ai/research/publications/SQLova.pdf) | 84.2 | 90.2               | 83.6                                    | 89.6                                  |  Inference          |
