@@ -29,14 +29,14 @@ If you use WikiSQL, please cite the following work:
 If you submit papers on WikiSQL, please consider sending a pull request to merge your results onto the leaderboard. By submitting, you acknowledge that your results are obtained purely by training on the training split and tuned on the dev split (e.g. you only evaluted on the test set once). Moreover, you acknowledge that your models only use the table schema and question during inference. That is they do *not* use the table content. **Update (May 12, 2019)**: We now have a separate leaderboard for distantly supervised models that do not use logical forms during training.
 
 
-### Distantly supervised without logical form
+### Distantly supervised without logical forms
 
 | Model | Dev execution accuracy | Test execution accuracy |
 | :---: | :---:        | :---:         |
 | [MAPO (Liang 2018)](https://arxiv.org/abs/1807.02322)  | 72.2 +/- 0.2 | 72.1 +/- 0.3  |
 
 
-### Supervised via logical form
+### Supervised via logical forms
 
 | Model                                                          | Dev logical form <br /> accuracy | Dev <br /> execution <br /> accuracy | Test <br /> logical form <br /> accuracy | Test <br /> execution <br /> accuracy | Uses execution |
 | :---:                                                          | :---:                                   | :---:                                | :---:                                    | :---:                                 | :---:          |
