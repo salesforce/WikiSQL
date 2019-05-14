@@ -34,7 +34,7 @@ If you submit papers on WikiSQL, please consider sending a pull request to merge
 | Model | Dev execution accuracy | Test execution accuracy |
 | :---: | :---:        | :---:         |
 | [MAPO (Liang 2018)](https://arxiv.org/abs/1807.02322)  | 72.2 +/- 0.2 | 72.1 +/- 0.3  |
-
+| [MeRL (Agarwal 2019)](https://arxiv.org/abs/1902.07198)  | 74.9 +/- 0.1 | 74.8 +/- 0.2  |
 
 ### Supervised via logical forms
 
