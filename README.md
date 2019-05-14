@@ -26,10 +26,10 @@ If you use WikiSQL, please cite the following work:
 
 ## Leaderboard
 
-If you submit papers on WikiSQL, please consider sending a pull request to merge your results onto the leaderboard. By submitting, you acknowledge that your results are obtained purely by training on the training split and tuned on the dev split (e.g. you only evaluted on the test set once). Moreover, you acknowledge that your models only use the table schema and question during inference. That is they do *not* use the table content. **Update (May 12, 2019)**: We now have a separate leaderboard for distantly supervised models that do not use logical forms during training.
+If you submit papers on WikiSQL, please consider sending a pull request to merge your results onto the leaderboard. By submitting, you acknowledge that your results are obtained purely by training on the training split and tuned on the dev split (e.g. you only evaluted on the test set once). Moreover, you acknowledge that your models only use the table schema and question during inference. That is they do *not* use the table content. **Update (May 12, 2019)**: We now have a separate leaderboard for weakly supervised models that do not use logical forms during training.
 
 
-### Distantly supervised without logical forms
+### Weakly supervised without logical forms
 
 | Model | Dev execution accuracy | Test execution accuracy |
 | :---: | :---:        | :---:         |
