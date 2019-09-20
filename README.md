@@ -36,6 +36,7 @@ If you submit papers on WikiSQL, please consider sending a pull request to merge
 | [Rule-SQL (Guo 2019)](https://arxiv.org/abs/1907.00620)  | 61.1 +/- 0.2 | 61.0 +/- 0.3  |
 | [MAPO (Liang 2018)](https://arxiv.org/abs/1807.02322)  | 72.2 +/- 0.2 | 72.1 +/- 0.3  |
 | [MeRL (Agarwal 2019)](https://arxiv.org/abs/1902.07198)  | 74.9 +/- 0.1 | 74.8 +/- 0.2  |
+| [LatentAlignment (Wang 2019)](https://arxiv.org/abs/1909.04165) | 79.4 | 79.3 |
 | Anonymous (2019) | 84.4 | 83.9 |
 
 ### Supervised via logical forms
