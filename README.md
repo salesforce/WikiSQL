@@ -36,6 +36,7 @@ If you submit papers on WikiSQL, please consider sending a pull request to merge
 | [Rule-SQL (Guo 2019)](https://arxiv.org/abs/1907.00620)  | 61.1 +/- 0.2 | 61.0 +/- 0.3  |
 | [MAPO (Liang 2018)](https://arxiv.org/abs/1807.02322)  | 72.2 +/- 0.2 | 72.1 +/- 0.3  |
 | [MeRL (Agarwal 2019)](https://arxiv.org/abs/1902.07198)  | 74.9 +/- 0.1 | 74.8 +/- 0.2  |
+| [LatentAlignment (Wang 2019)](https://arxiv.org/abs/1909.04165) | 79.4 | 79.3 |
 | Anonymous (2019) | 84.4 | 83.9 |
 
 ### Supervised via logical forms
@@ -44,13 +45,16 @@ If you submit papers on WikiSQL, please consider sending a pull request to merge
 | :---:                                                          | :---:                                   | :---:                                | :---:                                    | :---:                                 | :---:          |
 | HydraNet + Execution-Guided Decoding (Anonymous 2020) | 86.6 | 92.4               | 86.5                                    | 92.2                                  |      Inference      |
 | [X-SQL<br />+Execution-Guided Decoding<br />(He 2019)](https://www.microsoft.com/en-us/research/publication/x-sql-reinforce-context-into-schema-representation/) | 86.2 | 92.3               | 86.0                                    | 91.8                                  |  Inference          |
+| [(Guo 2019) <br />+Execution-Guided Decoding <br /> with BERT-Base-Uncased](https://arxiv.org/abs/1910.07179)^| 85.4 | 91.1               | 84.5                                    | 90.1                                  |  Inference          |
 | [SQLova<br />+Execution-Guided Decoding<br />(Hwang 2019)](https://ssl.pstatic.net/static/clova/service/clova_ai/research/publications/SQLova.pdf) | 84.2 | 90.2               | 83.6                                    | 89.6                                  |  Inference          |
 | [IncSQL<br />+Execution-Guided Decoding<br />(Shi 2018)](https://arxiv.org/pdf/1809.05054.pdf) | 51.3                                    | 87.2                                 | 51.1                                     | 87.1                                  | Inference      |
 | [Execution-Guided Decoding<br />(Wang 2018)](https://arxiv.org/abs/1807.03100) | 76.0                    | 84.0                                 | 75.4                                     | 83.8                                  | Inference      |
+| [(Guo 2019) <br /> with BERT-Base-Uncased](https://arxiv.org/abs/1910.07179)^ | 84.3 | 90.3               | 83.7                                    | 89.2                                  |            |
 | HydraNet (Anonymous 2020) | 83.6 | 89.1               | 83.8                                    | 89.2                                  |            |
 | [X-SQL<br />(He 2019)](https://www.microsoft.com/en-us/research/publication/x-sql-reinforce-context-into-schema-representation/) | 83.8 | 89.5               | 83.3                                    | 88.7                                  |            |
 | [SQLova <br />(Hwang 2019)](https://ssl.pstatic.net/static/clova/service/clova_ai/research/publications/SQLova.pdf) | 81.6 | 87.2              | 80.7                                    | 86.2                                  |                |
 | [IncSQL<br />(Shi 2018)](https://arxiv.org/pdf/1809.05054.pdf) | 49.9                                    | 84.0                                 | 49.9                                     | 83.7                                  |                |
+| [Auxiliary Mapping Task <br />(Chang 2019)](https://arxiv.org/pdf/1908.11052.pdf) | 76.0                                    | 82.3                                 | 75.0                                     | 81.7                                  |                |
 | [MQAN (unordered)<br />(McCann 2018)](https://arxiv.org/abs/1806.08730) | 76.1                           | 82.0                                 | 75.4                                     | 81.4                                  |                |
 | [MQAN (ordered)<br />(McCann 2018)](https://arxiv.org/abs/1806.08730) | 73.5                             | 82.0                                 | 73.2                                     | 81.4                                  |                |
 | [Coarse2Fine<br />(Dong 2018)](https://arxiv.org/abs/1805.04793) | 72.5                                  | 79.0                                 | 71.7                                     | 78.5                                  |                |
