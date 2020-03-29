@@ -116,7 +116,7 @@ These files are contained in the `*.jsonl` files. A line looks like the followin
 
 The fields represent the following:
 
-- `phase`: the phase in which the dataset was collection. We collected WikiSQL in two phases.
+- `phase`: the phase in which the dataset was collected. We collected WikiSQL in two phases.
 - `question`: the natural language question written by the worker.
 - `table_id`: the ID of the table to which this question is addressed.
 - `sql`: the SQL query corresponding to the question. This has the following subfields:
