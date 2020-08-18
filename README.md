@@ -24,6 +24,10 @@ If you use WikiSQL, please cite the following work:
 }
 ```
 
+## Notes
+
+Regarding tokenization and Stanza --- when WikiSQL was written 3-years ago, it relied on Stanza, a CoreNLP python wrapper that has since been deprecated. If you'd still like to use the tokenizer, please use the docker image. We do not anticipate switching to the current Stanza as changes to the tokenizer would render the previous results not reproducible. 
+
 ## Leaderboard
 
 If you submit papers on WikiSQL, please consider sending a pull request to merge your results onto the leaderboard. By submitting, you acknowledge that your results are obtained purely by training on the training split and tuned on the dev split (e.g. you only evaluted on the test set once). Moreover, you acknowledge that your models only use the table schema and question during inference. That is they do *not* use the table content. **Update (May 12, 2019)**: We now have a separate leaderboard for weakly supervised models that do not use logical forms during training.
@@ -120,7 +124,7 @@ These files are contained in the `*.jsonl` files. A line looks like the followin
 
 The fields represent the following:
 
-- `phase`: the phase in which the dataset was collection. We collected WikiSQL in two phases.
+- `phase`: the phase in which the dataset was collected. We collected WikiSQL in two phases.
 - `question`: the natural language question written by the worker.
 - `table_id`: the ID of the table to which this question is addressed.
 - `sql`: the SQL query corresponding to the question. This has the following subfields:
