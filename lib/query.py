@@ -44,7 +44,7 @@ class Query:
             sel='col{}'.format(self.sel_index),
         )
         if self.conditions:
-            rep +=  ' WHERE ' + ' AND '.join(['{} {} {}'.format('col{}'.format(i), self.cond_ops[o], v) for i, o, v in self.conditions])
+            rep +=  ' WHERE ' + ' AND '.join(['{} {} {}'.format('col{}'.format(i), self.cond_ops[o], '\"' + v + '\"' if isinstance(v, str) else v) for i, o, v in self.conditions])
         return rep
 
     def to_dict(self):
