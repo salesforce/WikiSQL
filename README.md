@@ -37,6 +37,8 @@ If you submit papers on WikiSQL, please consider sending a pull request to merge
 
 | Model | Dev execution accuracy | Test execution accuracy |
 | :---: | :---:        | :---:         |
+| [SeqGenSQL+EG (Li 2020)](https://arxiv.org/abs/2011.03836) | 90.8 | 90.5 |
+| [SeqGenSQL (Li 2020)](https://arxiv.org/abs/2011.03836) | 90.6 | 90.3|
 | [HardEM (Min 2019)](https://arxiv.org/abs/1909.04849) | 84.4 | 83.9 |
 | [LatentAlignment (Wang 2019)](https://arxiv.org/abs/1909.04165) | 79.4 | 79.3 |
 | [MeRL (Agarwal 2019)](https://arxiv.org/abs/1902.07198)  | 74.9 +/- 0.1 | 74.8 +/- 0.2  |
