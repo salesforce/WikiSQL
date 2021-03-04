@@ -37,6 +37,7 @@ If you submit papers on WikiSQL, please consider sending a pull request to merge
 
 | Model | Dev execution accuracy | Test execution accuracy |
 | :---: | :---:        | :---:         |
+| [Text2SQLGen + EG (Mellah 2021)](https://novelisconsulting-my.sharepoint.com/:b:/g/personal/ymellah_novelis_io/EXQIItFj30BNhD0CytVzIB4BdvpEDLd6CFtq2wNaF5YMvA?e=DHk325) <br/>(NovyLab Novelis Research) | 91.2 | 91.0 |
 | [SeqGenSQL+EG (Li 2020)](https://arxiv.org/abs/2011.03836) | 90.8 | 90.5 |
 | [SeqGenSQL (Li 2020)](https://arxiv.org/abs/2011.03836) | 90.6 | 90.3|
 | [HardEM (Min 2019)](https://arxiv.org/abs/1909.04849) | 84.4 | 83.9 |
