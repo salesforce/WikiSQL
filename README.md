@@ -48,10 +48,12 @@ If you submit papers on WikiSQL, please consider sending a pull request to merge
 
 | Model                                                          | Dev logical form <br /> accuracy | Dev <br /> execution <br /> accuracy | Test <br /> logical form <br /> accuracy | Test <br /> execution <br /> accuracy | Uses execution |
 | :---:                                                          | :---:                                   | :---:                                | :---:                                    | :---:                                 | :---:          |
+| [SDSQL<br />+Execution-Guided Decoding<br />(Hui 2020)](https://arxiv.org/abs/2103.04399) <br /> (Alibaba Group)| 87.1 | 92.6               | 87.0                                    | 92.7                                  |      Inference      |
 | [IE-SQL<br />+Execution-Guided Decoding<br />(Ma 2020)](https://drive.google.com/file/d/1t3xEltqKpYJGYekAhQ5vYFen1ocHJ3sY/view?usp=sharing) <br /> (Ping An Life, AI Team)| 87.9 | 92.6               | 87.8                                    | 92.5                                  |      Inference      |
 | [HydraNet<br />+Execution-Guided Decoding<br />(Lyu 2020)](https://www.microsoft.com/en-us/research/publication/hybrid-ranking-network-for-text-to-sql/) <br />(Microsoft Dynamics 365 AI) | 86.6 | 92.4               | 86.5                                    | 92.2                                  |      Inference      |
 | [BRIDGE^<br />+Execution-Guided Decoding<br />(Lin 2020)](https://arxiv.org/abs/2012.12627)<br />(Salesforce Research) | 86.8 | 92.6               | 86.3                                    | 91.9                                  |  Inference          |
 | [X-SQL<br />+Execution-Guided Decoding<br />(He 2019)](https://www.microsoft.com/en-us/research/publication/x-sql-reinforce-context-into-schema-representation/) | 86.2 | 92.3               | 86.0                                    | 91.8                                  |  Inference          |
+| [SDSQL<br />(Hui 2020)](https://arxiv.org/abs/2103.04399) <br /> (Alibaba Group)| 86.0 | 91.8               | 85.6                                    | 91.4                                  |            |
 | [BRIDGE^<br />(Lin 2020)<br />](https://arxiv.org/abs/2012.12627)(Salesforce Research) | 86.2                        | 91.7                      | 85.7                       | 91.1 |
 | [SeqGenSQL+EG (Li 2020)](https://arxiv.org/abs/2011.03836) | | 90.8 | | 90.5 | Inference |
 | [SeqGenSQL (Li 2020)](https://arxiv.org/abs/2011.03836) | | 90.6 | | 90.3| |
