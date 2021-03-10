@@ -53,8 +53,9 @@ If you submit papers on WikiSQL, please consider sending a pull request to merge
 | [BRIDGE^<br />+Execution-Guided Decoding<br />(Lin 2020)](https://arxiv.org/abs/2012.12627)<br />(Salesforce Research) | 86.8 | 92.6               | 86.3                                    | 91.9                                  |  Inference          |
 | [X-SQL<br />+Execution-Guided Decoding<br />(He 2019)](https://www.microsoft.com/en-us/research/publication/x-sql-reinforce-context-into-schema-representation/) | 86.2 | 92.3               | 86.0                                    | 91.8                                  |  Inference          |
 | [BRIDGE^<br />(Lin 2020)<br />](https://arxiv.org/abs/2012.12627)(Salesforce Research) | 86.2                        | 91.7                      | 85.7                       | 91.1 |
+| [Text2SQLGen + EG (Mellah 2021)](https://novelisconsulting-my.sharepoint.com/:b:/g/personal/ymellah_novelis_io/EXQIItFj30BNhD0CytVzIB4BdvpEDLd6CFtq2wNaF5YMvA?e=DHk325) <br/>(Novelis.io Research) | | 91.2 | | 91.0 | Inference |
 | [SeqGenSQL+EG (Li 2020)](https://arxiv.org/abs/2011.03836) | | 90.8 | | 90.5 | Inference |
-| [SeqGenSQL (Li 2020)](https://arxiv.org/abs/2011.03836) | | 90.6 | | 90.3| |
+| [SeqGenSQL (Li 2020)](https://arxiv.org/abs/2011.03836) | | 90.6 | | 90.3| Inference |
 | [(Guo 2019) <br />+Execution-Guided Decoding <br /> with BERT-Base-Uncased](https://arxiv.org/abs/1910.07179)^| 85.4 | 91.1               | 84.5                                    | 90.1                                  |  Inference          |
 | [SQLova<br />+Execution-Guided Decoding<br />(Hwang 2019)](https://ssl.pstatic.net/static/clova/service/clova_ai/research/publications/SQLova.pdf) | 84.2 | 90.2               | 83.6                                    | 89.6                                  |  Inference          |
 | [IncSQL<br />+Execution-Guided Decoding<br />(Shi 2018)](https://arxiv.org/pdf/1809.05054.pdf) | 51.3                                    | 87.2                                 | 51.1                                     | 87.1                                  | Inference      |
