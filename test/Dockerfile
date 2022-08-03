@@ -1,6 +1,5 @@
 FROM python:3.6.2-alpine
 
-RUN mkdir -p /eval
 WORKDIR /eval
 ADD . /eval/
 
