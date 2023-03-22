@@ -3,3 +3,5 @@
 __pycache__/
 data/
 annotated/
+my_env/
+.DS_Store
