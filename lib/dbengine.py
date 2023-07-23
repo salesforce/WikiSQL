@@ -26,7 +26,10 @@ class DBEngine:
         for tup in schema_str.split(', '):
             c, t = tup.split()
             schema[c] = t
-        select = 'col{}'.format(select_index)
+        if select_index == '*':
+            select = select_index
+        else:
+            select = 'col{}'.format(select_index)
         agg = Query.agg_ops[aggregation_index]
         if agg:
             select = '{}({})'.format(agg, select)
