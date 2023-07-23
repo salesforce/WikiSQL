@@ -36,9 +36,6 @@ def evaluate_wikisql():
             qp = None
             if not ep.get('error', None):
                 try:
-                    # If SELECT * is used with an agg function, then set to the correctly selected column
-                    if ep['ddb_query']['sel'] == '*' and eg['sql']['agg'] == 3:
-                        ddb['ddb_query']['sel'] =  eg['sql']['sel']
                     qp_ddb = Query.from_dict(ddb['ddb_query'], ordered=args.ordered)
                     pred_ddb = engine.execute_query(eg['table_id'], qp_ddb, lower=True) 
                 except Exception as e:
@@ -59,11 +56,21 @@ def evaluate_wikisql():
             grades_ddb.append(correct_ddb)
             exact_match.append(match) # SQL query itself
             exact_match_ddb.append(match_ddb)       
-            
-            if correct == 0:
+            # if count == 24:
+            #     print('Question num: ', str(count))
+            #     print('ex_accuracy: ', str(correct))
+            #     print('Pred: ', str(pred))
+            #     print('Gold: ', str(gold))
+            #     print('lf_accuracy: ', str(match))
+            #     print('Pred: ', str(qp))
+            #     print('Gold: ', str(qg))
+            if match == 0:
                 incorrect_answer.append(f'dev_{count}')
-                incorrect_pred.append(pred)
-                correct_answer.append(gold)
+                incorrect_pred.append(qp)
+                correct_answer.append(qg)
+            if correct != correct_ddb:
+                print('Question num: ', str(count))
+          
             count += 1
         result_list_dict = {
                 'Incorrect answer question #': incorrect_answer,
@@ -73,7 +80,8 @@ def evaluate_wikisql():
         result_list_df = pd.DataFrame(result_list_dict)
         result_list_df.to_csv(args.csv_file_location)
         output = json.dumps({
-            'incorrect_questions': [i for i, x in enumerate(grades) if x == 0],
+            'incorrect_ex_questions': [i for i, x in enumerate(grades) if x == 0],
+            'incorrect_lf_questions': [i for i, x in enumerate(exact_match) if x == 0],
             'ex_accuracy': sum(grades) / len(grades), # Compare query output
             'lf_accuracy': sum(exact_match) / len(exact_match), # Compare SQL query itself
             'ddb_ex_accuracy': sum(grades_ddb) / len(grades_ddb),
