@@ -2,3 +2,4 @@ tqdm
 records
 babel
 tabulate
+SQLAlchemy==1.3

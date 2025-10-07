@@ -1,5 +1,13 @@
-.py[cod]
-*.jsonl
-__pycache__/
+# Data Files
 data/
+*.jsonl
 annotated/
+
+# Environments
+venv/
+my_env/
+
+# Other
+.py[cod]
+__pycache__/
+.DS_Store
